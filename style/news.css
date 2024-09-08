@@ -1,0 +1,140 @@
+.news {
+    margin: 0 0 60px;
+}
+
+.news__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.news__title {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.news__title::after {
+    content: '';
+    width: 102%;
+    height: 2px;
+    background: #323232;
+    position: absolute;
+    border-radius: 3px;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.news__title-text {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.tip {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 13px 29px;
+    background: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    color: #323232;
+    border-radius: 8px;
+}
+
+.news__card-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.news__card {
+    max-width: 636px;
+    width: 100%;
+    height: auto;
+    background: url(../img/tip1.png) no-repeat center/cover;
+    padding: 110px 110px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.news__card-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.news__card-desc-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.news__card-desc-text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #E1E1E1;
+}
+
+.news__card-time {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.news__card-time-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.news__card:nth-child(2){
+    background: url(../img/tip2.png) no-repeat center/cover;
+}
+
+
+@media screen and (max-width: 1350px) {
+    .news__title::after{
+        width: 101%;
+    }
+    .news__card-wrap{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        place-items: center;
+    }
+    .news__card{
+        height: 100%;
+        gap: none;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .news__card{
+        padding: 110px 50px 50px;
+    }
+}
+
+@media screen and (max-width: 510px){
+    .news__title-text{
+        font-size: 25px;
+        text-align: center;
+    }
+    .news__card{
+        padding: 100px 20px 20px;
+        justify-content: none;
+        gap: 50px;
+    }
+    .news__card-desc-title{
+        text-align: center;
+    }
+    .news__card-desc-text{
+        text-align: center;
+    }
+}
